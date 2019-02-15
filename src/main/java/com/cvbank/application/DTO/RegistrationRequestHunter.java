@@ -1,11 +1,29 @@
 package com.cvbank.application.DTO;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
-@AllArgsConstructor
-@NoArgsConstructor
+import java.time.LocalDate;
+
+
 @Getter
 @Setter
-@Builder
-public class RegistrationRequestHunter {
+public class RegistrationRequestHunter extends RegistrationRequest {
+
+    /*
+     *
+     * add fields
+     *
+     *
+     * */
+
+
+    public RegistrationRequestHunter() {
+    }
+
+    @Builder // TODO: Refactoring constructor
+    public RegistrationRequestHunter(String firstName, String lastName, String email, String phone, LocalDate birthday) {
+        super(firstName, lastName, email, phone, birthday);
+    }
 }

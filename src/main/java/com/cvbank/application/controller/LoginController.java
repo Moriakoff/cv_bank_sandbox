@@ -1,21 +1,9 @@
 package com.cvbank.application.controller;
 
 import com.cvbank.application.DTO.LoginRequest;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class LoginController {
+public interface LoginController {
+    void login(LoginRequest request);
 
-    @PostMapping("/login")
-    public void login(@RequestBody LoginRequest request){
-
-    }
-
-    @PostMapping("/logout")
-    public void logout(@RequestHeader("token") String token){
-
-    }
+    void logout(String token);
 }
