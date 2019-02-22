@@ -11,10 +11,7 @@ import java.util.List;
 @Builder
 public class SkillDto {
 
-    private List <String> programmingLanguages;
-    private List <String> technologies;
-    private List <String> environments;
-    private List <String> databases;
-    private List <String> systems;
+    private List <String> skills;
+
 
 }
