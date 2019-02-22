@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/registration")
-public class RegistrationControllerImpl{
+public class RegistrationController {
 
     @PostMapping
     public void RegistrationSeeker(@RequestBody RegistrationRequestSeeker request) {

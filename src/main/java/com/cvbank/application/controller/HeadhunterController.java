@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/hh")
-public class HeadhunterControllerImpl{
+public class HeadhunterController {
 
     @PostMapping("/search_cv_by_criteria")
     public List <SearchCvResponse> searchCvByCriteria(@RequestBody SearchCvRequest request){

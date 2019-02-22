@@ -1,7 +1,7 @@
 package com.cvbank.application.DTO.cv;
-
 import lombok.*;
 
+import javax.persistence.Entity;
 import java.util.List;
 
 @Getter
@@ -9,8 +9,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Entity
 public class SkillDto {
 
-    private List <String> skillName;
+    private List<String> skillName;
 
 }
