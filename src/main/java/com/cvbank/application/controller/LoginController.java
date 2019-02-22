@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LoginControllerImpl{
+public class LoginController {
 
     @PostMapping("/login")
     public void login(@RequestBody LoginRequest request) {
