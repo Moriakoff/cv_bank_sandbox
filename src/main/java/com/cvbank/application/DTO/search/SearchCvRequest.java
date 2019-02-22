@@ -1,4 +1,4 @@
-package com.cvbank.application.DTO;
+package com.cvbank.application.DTO.search;
 
 import lombok.*;
 

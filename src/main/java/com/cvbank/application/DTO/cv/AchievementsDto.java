@@ -10,5 +10,5 @@ import lombok.*;
 public class AchievementsDto {
     private Integer year;
     private String description;
-    private String nonination;
+    private String nomination;
 }

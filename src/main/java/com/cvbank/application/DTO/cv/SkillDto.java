@@ -11,7 +11,6 @@ import java.util.List;
 @Builder
 public class SkillDto {
 
-    private List <String> skills;
-
+    private List <String> skillName;
 
 }
