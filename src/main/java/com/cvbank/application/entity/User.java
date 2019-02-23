@@ -34,8 +34,7 @@ public class User {
     private String email;
 
     private String city;
-
-    // TODO: 2019-02-22 think about userRole
+    
     @Convert(converter = RoleTypeConverter.class)
     @ElementCollection(targetClass = RoleTypeConverter.class, fetch = FetchType.EAGER)
     private RoleType roleType;
