@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegistrationController {
 
     @Autowired
-    private RegistrationService registrationService;
+    private RegistrationService registrationService123;
 
     @PostMapping
     public void RegistrationSeeker(@RequestBody RegistrationRequest request) {
