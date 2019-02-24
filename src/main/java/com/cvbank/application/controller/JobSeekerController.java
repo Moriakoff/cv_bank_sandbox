@@ -10,23 +10,23 @@ import java.util.List;
 public class JobSeekerController {
 
     @PostMapping("/")
-    public void createCv(@RequestHeader("token") String token,
+    public void createCv(@RequestHeader("Authorization") String token,
                          @RequestBody CvDto cv) {
 
     }
 
     @PutMapping("/")
-    public void editCv(@RequestHeader("token")  String token){
+    public void editCv(@RequestHeader("Authorization") String token) {
 
     }
 
     @DeleteMapping("/")
-    public void deleteCv(@RequestHeader("token")  String token){
+    public void deleteCv(@RequestHeader("Authorization") String token) {
 
     }
 
     @GetMapping("/")
-    public List<?> getAllCvByUser(@RequestHeader("token")  String token){
+    public List <?> getAllCvByUser(@RequestHeader("Authorization") String token) {
 
         return null;
     }
