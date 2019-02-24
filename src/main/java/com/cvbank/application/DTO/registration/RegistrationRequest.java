@@ -1,41 +1,26 @@
 package com.cvbank.application.DTO.registration;
 
-import lombok.*;
-import org.springframework.lang.NonNull;
+import lombok.Data;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-public class RegistrationRequest {
+@Data
+abstract class RegistrationRequest {
 
-    @NotBlank
     private String firstName;
-
-    @NotBlank
     private String lastName;
-
-    @Email
     private String email;
-
-    @NotBlank
     private String phone;
-
-    @NotBlank
-    private String city;
-
-    @NonNull
     private LocalDate birthday;
 
-    @NotBlank
-    private String password;
+    RegistrationRequest() {
+    }
 
-    @NotBlank
-    private String confirmPassword;
-
+    RegistrationRequest(String firstName, String lastName, String email, String phone, LocalDate birthday) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.birthday = birthday;
+    }
 }

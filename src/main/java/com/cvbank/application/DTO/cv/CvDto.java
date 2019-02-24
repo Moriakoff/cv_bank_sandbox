@@ -2,8 +2,6 @@ package com.cvbank.application.DTO.cv;
 
 import lombok.*;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Positive;
 import java.util.List;
 
 @Getter
@@ -14,14 +12,10 @@ import java.util.List;
 public class CvDto {
     /*User*//*            private String firstName;
     *//*User*//*            private String lastName;*/
-
-    @NotBlank
-    private String position; //indexing
-    @Positive
-    private Double salary; //indexing
+                        private String position; //indexing
+                        private Double salary; //indexing
                         /*private String info;*/
    /* *//*User*//*            private ContactInfoDto contactInfoDto; //index (city, citizenship)*/
-                        @NotBlank
                         private String summary;
     /*Skill*/           private SkillDto skill; //indexing
     /*Project*/         private List <ProjectDto> projects;
