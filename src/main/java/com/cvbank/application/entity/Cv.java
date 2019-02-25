@@ -2,9 +2,7 @@ package com.cvbank.application.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -18,6 +16,8 @@ public class Cv {
 
     // TODO: 2019-02-24 Think about relationships
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
@@ -27,27 +27,29 @@ public class Cv {
 
     private String position;
 
-    private Double salary;
+    private Integer salary;
 
     private String summary;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List <Skill> skills;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List <Project> projects;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List <Education> educations;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List <Certification> certifications;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List <Achievement> achievements;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List <Language> languages;
+
+    private Integer countReview;
 
 
 }

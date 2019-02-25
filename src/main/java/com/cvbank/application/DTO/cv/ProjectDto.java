@@ -1,23 +1,29 @@
 package com.cvbank.application.DTO.cv;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Past;
-import java.time.LocalDate;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class ProjectDto {
 
-    @Past
-    private LocalDate from;
+    // TODO: 2019-02-24  Think abount @Max ! Now Hard Code style
 
-    @Past
-    private LocalDate to;
+    @Min(value = 1970)
+    @Max(value = 2019)
+    private Integer fromYear;
+
+    @Min(value = 1970)
+    @Max(value = 2019)
+    private Integer toYear;
 
     @NotBlank
     private String position;

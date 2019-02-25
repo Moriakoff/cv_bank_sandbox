@@ -2,7 +2,10 @@ package com.cvbank.application.entity;
 
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Getter
 @Setter
@@ -20,7 +23,4 @@ public class Achievement {
     private String description;
     private String nomination;
 
-    // TODO: 2019-02-22
-    @ManyToOne
-    private User user;
 }

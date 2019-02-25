@@ -19,8 +19,4 @@ public class Skill {
     @Column(unique = true)
     private String skill;
 
-    // TODO: 2019-02-22
-    @ManyToOne
-    private User user;
-
 }

@@ -1,7 +1,12 @@
 package com.cvbank.application.DTO.cv;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
 
@@ -9,10 +14,13 @@ import javax.validation.constraints.Positive;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class AchievementsDto {
 
+// TODO: 2019-02-24 Hard Code Detected!!!!
+
     @Positive
+    @Min(value = 1970)
+    @Max(value = 2019)
     private Integer year;
 
     @NotBlank

@@ -2,8 +2,10 @@ package com.cvbank.application.entity;
 
 import lombok.*;
 
-import javax.persistence.*;
-import java.time.LocalDate;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
 @Getter
@@ -17,15 +19,18 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private LocalDate from;
-    private LocalDate to;
+
+    private Integer fromYear;
+
+    private Integer toYear;
+
     private String position;
+
     private String company;
+
     private String locale;
+
     private String info;
 
 
-    // TODO: 2019-02-22
-    @OneToOne
-    private User user;
 }

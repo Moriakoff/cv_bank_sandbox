@@ -1,7 +1,6 @@
 package com.cvbank.application.entity;
 
 import com.cvbank.application.entity.type.RoleType;
-import com.cvbank.application.entity.type.RoleTypeConverter;
 import lombok.*;
 
 import javax.persistence.*;
@@ -15,7 +14,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 @Entity
-
 public class User {
 
     @Id
@@ -34,9 +32,8 @@ public class User {
     private String email;
 
     private String city;
-    
-    @Convert(converter = RoleTypeConverter.class)
-    @ElementCollection(targetClass = RoleTypeConverter.class, fetch = FetchType.EAGER)
+
+    @Enumerated(EnumType.STRING)
     private RoleType roleType;
 
 

@@ -1,7 +1,10 @@
 package com.cvbank.application.DTO.cv;
-import lombok.*;
 
-import javax.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.validation.constraints.NotBlank;
 import java.util.List;
 
@@ -9,8 +12,6 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@Entity
 public class SkillDto {
 
     @NotBlank

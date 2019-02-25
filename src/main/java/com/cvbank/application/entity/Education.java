@@ -3,8 +3,9 @@ package com.cvbank.application.entity;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 
 @Getter
@@ -16,6 +17,7 @@ import javax.persistence.ManyToOne;
 public class Education {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Integer dateFrom;
@@ -24,8 +26,4 @@ public class Education {
 
     private String institute;
 
-
-    // TODO: 2019-02-22
-    @ManyToOne
-    private User user;
 }
