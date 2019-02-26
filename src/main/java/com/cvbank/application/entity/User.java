@@ -7,6 +7,7 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.time.LocalDate;
+import java.util.List;
 
 
 @Getter
@@ -38,6 +39,9 @@ public class User {
     @Convert(converter = RoleTypeConverter.class)
     @ElementCollection(targetClass = RoleTypeConverter.class, fetch = FetchType.EAGER)
     private RoleType roleType;
+    
+    @OneToMany
+    private List<CV> cvs;
 
 
 }

@@ -12,6 +12,6 @@ import java.util.List;
 @Entity
 public class SkillDto {
 
-    private List<String> skillName;
+    private List<String> skillNames;
 
 }
