@@ -24,4 +24,5 @@ public class CvDto {
     /*Achievement*/     private List <AchievementsDto> achievements;
                         private List <String> languages; //indexing
                         private List <String> links;
+                        private String additionInfo;
 }
