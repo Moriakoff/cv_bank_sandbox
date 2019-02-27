@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.cvbank.application.DTO.cv.ProjectDto;
+
 import lombok.*;
 
 
@@ -16,6 +18,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 
 @Entity
 
@@ -43,6 +46,8 @@ public class CV {
     private List <Education> educations;
     
     private List <Certification> certifications;
+    
+    private List <Project> projects;
     
     private List <Achievement> achievements;
     
