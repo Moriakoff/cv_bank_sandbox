@@ -1,5 +1,6 @@
 package com.cvbank.application.entity;
 
+import com.cvbank.application.entity.type.CvStatus;
 import lombok.*;
 
 import javax.persistence.*;
@@ -50,6 +51,10 @@ public class Cv {
     private List <Language> languages;
 
     private Integer countReview;
+
+    @Enumerated(EnumType.STRING)
+    private CvStatus cvStatus;
+
 
 
 }

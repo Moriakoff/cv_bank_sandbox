@@ -2,10 +2,7 @@ package com.cvbank.application.controller;
 
 import com.cvbank.application.DTO.search.SearchCvRequest;
 import com.cvbank.application.DTO.search.SearchCvResponse;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,12 +11,14 @@ import java.util.List;
 public class HeadhunterController {
 
     @PostMapping("/search_cv_by_criteria")
-    public List <SearchCvResponse> searchCvByCriteria(@RequestBody SearchCvRequest request){
+    public List <SearchCvResponse> searchCvByCriteria(@RequestHeader(value = "Authorization") String token,
+                                                      @RequestBody SearchCvRequest request){
         return null;
     }
 
     @PostMapping("/save_list_cv")
-    public void saveListCv(List <Integer> cvs) {
+    public void saveListCv(@RequestHeader(value = "Authorization") String token,
+                           @RequestBody List <Integer> cvs) {
 
     }
 
