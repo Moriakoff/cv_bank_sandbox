@@ -27,8 +27,9 @@ public class JobSeekerController {
     }
 
     @DeleteMapping("/")
-    public void deleteCv(@RequestHeader("token")  String token){
-
+    public void deleteCv(@RequestHeader("token")  String token,
+    		@PathVariable(name = "id") Integer cvId){
+    		cvServise.deleteCv(token, cvId);
     }
 
     @GetMapping("/")

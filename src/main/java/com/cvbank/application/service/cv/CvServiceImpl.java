@@ -37,9 +37,8 @@ public class CvServiceImpl implements CvService {
 	}
 
 	@Override
-	public void deleteCv(String token) {
-		// TODO Auto-generated method stub
-
+	public void deleteCv(String token, Integer cvId) {
+		cvRepository.deleteById(cvId);
 	}
 
 	@Override

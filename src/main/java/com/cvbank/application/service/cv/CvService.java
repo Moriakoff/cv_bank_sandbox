@@ -10,7 +10,7 @@ public interface CvService {
 	
 	void editCv(String token);
 	
-	void deleteCv(String token);
+	void deleteCv(String token, Integer cvId);
 	
 	List<?> getAllCvByUser(String token);
 
