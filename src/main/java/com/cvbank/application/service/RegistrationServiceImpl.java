@@ -3,6 +3,7 @@ package com.cvbank.application.service;
 import com.cvbank.application.DTO.registration.RegistrationRequest;
 import com.cvbank.application.entity.User;
 import com.cvbank.application.repository.UserRepository;
+import com.cvbank.application.service.mail.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,8 @@ public class RegistrationServiceImpl implements RegistrationService {
 
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    EmailService emailService;
 
     @Override
     public void registration(RegistrationRequest request) {
@@ -35,5 +38,7 @@ public class RegistrationServiceImpl implements RegistrationService {
                 .build();
 
         userRepository.save(user);
+
+        emailService.sendRegistrationMessage(user.getEmail());
     }
 }
