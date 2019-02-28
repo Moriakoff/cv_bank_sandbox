@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 
 @Getter
 @Setter
@@ -16,6 +17,9 @@ import javax.validation.constraints.NotBlank;
 public class ProjectDto {
 
     // TODO: 2019-02-24  Think abount @Max ! Now Hard Code style
+
+    @Positive
+    private Integer id;
 
     @Min(value = 1970)
     @Max(value = 2019)

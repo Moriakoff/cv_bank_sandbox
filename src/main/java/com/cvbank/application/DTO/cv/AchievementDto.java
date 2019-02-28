@@ -14,7 +14,7 @@ import javax.validation.constraints.Positive;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AchievementsDto {
+public class AchievementDto {
 
 // TODO: 2019-02-24 Hard Code Detected!!!!
 
@@ -22,6 +22,9 @@ public class AchievementsDto {
     @Min(value = 1970)
     @Max(value = 2019)
     private Integer year;
+
+    @Positive
+    private Integer id;
 
     @NotBlank
     private String description;

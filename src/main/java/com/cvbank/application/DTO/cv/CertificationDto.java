@@ -15,6 +15,9 @@ import javax.validation.constraints.Positive;
 public class CertificationDto {
 
     @Positive
+    private Integer id;
+
+    @Positive
     private Integer year;
 
     @NotBlank

@@ -15,6 +15,9 @@ import javax.validation.constraints.Positive;
 public class EducationDto {
 
     @Positive
+    private Integer id;
+
+    @Positive
     private Integer dateFrom;
 
     @Positive

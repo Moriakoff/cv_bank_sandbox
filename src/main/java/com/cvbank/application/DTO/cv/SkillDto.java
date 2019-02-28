@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
-import java.util.List;
+import javax.validation.constraints.Positive;
 
 @Getter
 @Setter
@@ -14,7 +14,10 @@ import java.util.List;
 @NoArgsConstructor
 public class SkillDto {
 
+    @Positive
+    private Integer id;
+
     @NotBlank
-    private List<String> skillName;
+    private String skillName;
 
 }

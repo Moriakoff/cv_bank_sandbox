@@ -24,7 +24,7 @@ public class CvDto {
     @NotBlank
     private String summary;
 
-    private SkillDto skill; //indexing                  /*Skill*/
+    private List<SkillDto> skill; //indexing            /*Skill*/
 
     private List <ProjectDto> projects;                 /*Project*/
 
@@ -32,7 +32,7 @@ public class CvDto {
 
     private List <CertificationDto> certifications;     /*Certification*/
 
-    private List <AchievementsDto> achievements;        /*Achievement*/
+    private List <AchievementDto> achievements;        /*Achievement*/
 
     private List <String> languages; //indexing
 
