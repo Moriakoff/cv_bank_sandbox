@@ -5,10 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
+import java.time.Year;
 
 @Getter
 @Setter
@@ -16,12 +15,7 @@ import javax.validation.constraints.Positive;
 @NoArgsConstructor
 public class AchievementDto {
 
-// TODO: 2019-02-24 Hard Code Detected!!!!
-
-    @Positive
-    @Min(value = 1970)
-    @Max(value = 2019)
-    private Integer year;
+    private Year year;
 
     @Positive
     private Integer id;

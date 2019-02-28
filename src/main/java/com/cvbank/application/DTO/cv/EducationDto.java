@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
+import java.time.Year;
 
 @Getter
 @Setter
@@ -17,11 +18,9 @@ public class EducationDto {
     @Positive
     private Integer id;
 
-    @Positive
-    private Integer dateFrom;
+    private Year dateFrom;
 
-    @Positive
-    private Integer dateTo;
+    private Year dateTo;
 
     @NotBlank
     private String institute;

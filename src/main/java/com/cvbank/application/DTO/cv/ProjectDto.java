@@ -5,10 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
+import java.time.Year;
 
 @Getter
 @Setter
@@ -21,13 +20,9 @@ public class ProjectDto {
     @Positive
     private Integer id;
 
-    @Min(value = 1970)
-    @Max(value = 2019)
-    private Integer fromYear;
+    private Year fromYear;
 
-    @Min(value = 1970)
-    @Max(value = 2019)
-    private Integer toYear;
+    private Year toYear;
 
     @NotBlank
     private String position;
