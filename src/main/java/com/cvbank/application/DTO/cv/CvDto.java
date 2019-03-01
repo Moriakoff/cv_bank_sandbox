@@ -15,20 +15,6 @@ import java.util.List;
 @NoArgsConstructor
 public class CvDto {
 
-    /*First chapter*/
-
-    @NotBlank
-    private String position; //indexing
-
-    @Positive
-    private Double salary; //indexing
-
-    @NotBlank
-    private String summary;
-
-    private List<SkillDto> skill; //indexing            /*Skill*/
-
-
     /*Second chapter*/
 
     private List <ProjectDto> projects;                 /*Project*/

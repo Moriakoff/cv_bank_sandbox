@@ -13,6 +13,8 @@ import java.util.List;
 @Builder
 public class SearchCvRequest {
 
+    //It's Request that used by HH in search
+
     @NotBlank
     private String position;
 

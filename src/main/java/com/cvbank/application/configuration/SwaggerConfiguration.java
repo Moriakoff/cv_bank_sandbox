@@ -11,6 +11,9 @@ import springfox.documentation.swagger.web.UiConfiguration;
 import springfox.documentation.swagger.web.UiConfigurationBuilder;
 
 
+/**
+ * author:Pavel Moriakov
+ */
 @Configuration
 public class SwaggerConfiguration {
 
