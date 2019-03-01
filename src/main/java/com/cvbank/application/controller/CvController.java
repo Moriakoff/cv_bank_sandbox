@@ -1,17 +1,18 @@
 package com.cvbank.application.controller;
 
-import com.cvbank.application.DTO.cv.AchievementDto;
-import com.cvbank.application.DTO.cv.CertificationDto;
-import com.cvbank.application.DTO.cv.ProjectDto;
-import com.cvbank.application.DTO.cv.SkillDto;
+import com.cvbank.application.DTO.cv.*;
+import com.cvbank.application.DTO.search.SearchCvRequest;
+import com.cvbank.application.DTO.search.SearchCvResponse;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/cv")
 public class CvController {
 
 
-    @GetMapping("/create_cv")
+    @PostMapping("/create_cv")
     public Integer createEmptyCv(@RequestHeader("Authorization") String token) {
         return null;
     }
@@ -63,5 +64,32 @@ public class CvController {
                              @RequestParam String language) {
 
     }
+
+
+    @PostMapping("/search_cv_by_criteria")
+    public List <SearchCvResponse> searchCvByCriteria(@RequestHeader(value = "Authorization") String token,
+                                                      @RequestBody SearchCvRequest request){
+        return null;
+    }
+
+    @PostMapping("/save_list_cv")
+    public void saveListCv(@RequestHeader(value = "Authorization") String token,
+                           @RequestBody List <Integer> cvs) {
+
+    }
+
+    @DeleteMapping("/delete")
+    public void deleteCv(@RequestHeader("Authorization") String token,
+                         @PathVariable(name = "id") Integer id) {
+
+    }
+
+    @GetMapping("/get_all")
+    public List <CvDto> getAllCvByUser(@RequestHeader("Authorization") String token) {
+
+        return null;
+    }
+
+
 
 }

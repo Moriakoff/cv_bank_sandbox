@@ -20,6 +20,9 @@ public class ProjectDto {
     @Positive
     private Integer id;
 
+    @Positive
+    private Integer idCv;
+
     private Year fromYear;
 
     private Year toYear;

@@ -36,7 +36,7 @@ public class LoginServiceImpl implements LoginService {
                 .isValid(true)
                 .build();
 
-        return new LoginResponse(userSession.getToken());
+        return new LoginResponse(user.getFirstName(),userSession.getToken());
     }
 
     @Override

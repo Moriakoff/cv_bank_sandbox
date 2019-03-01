@@ -18,6 +18,9 @@ public class CertificationDto {
     @Positive
     private Integer id;
 
+    @Positive
+    private Integer idCv;
+
     private Year year;
 
     @NotBlank

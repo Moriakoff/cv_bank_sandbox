@@ -15,6 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 public class CvDto {
 
+    /*First chapter*/
+
     @NotBlank
     private String position; //indexing
 
@@ -25,6 +27,9 @@ public class CvDto {
     private String summary;
 
     private List<SkillDto> skill; //indexing            /*Skill*/
+
+
+    /*Second chapter*/
 
     private List <ProjectDto> projects;                 /*Project*/
 

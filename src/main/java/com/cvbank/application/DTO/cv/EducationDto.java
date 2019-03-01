@@ -18,6 +18,9 @@ public class EducationDto {
     @Positive
     private Integer id;
 
+    @Positive
+    private Integer idCv;
+
     private Year dateFrom;
 
     private Year dateTo;

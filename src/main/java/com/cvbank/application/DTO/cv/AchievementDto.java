@@ -18,6 +18,9 @@ public class AchievementDto {
     private Year year;
 
     @Positive
+    private Integer idCv;
+
+    @Positive
     private Integer id;
 
     @NotBlank
